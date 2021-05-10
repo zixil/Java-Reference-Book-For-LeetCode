@@ -44,6 +44,7 @@ public static class Example {
 public static class Example {
     public static void main(String[] args) {
         String[] a = new String[]{"0"};
+
         List<String> l = Arrays.asList(a);
         ArrayList<String> al = new ArrayList<>(Arrays.asList(a));
     }
@@ -56,13 +57,28 @@ public static class Example {
 public static class Example {
     public static void main(String[] args) {
         List<String> l = Arrays.asList("0", "1");
+
         String[] a1 = l.toArray(new String[0]);
         String[] a2 = l.stream().toArray(String[] ::new);
     }
 }
 ```
 
-## `Collection` to `Array`
+## `Collection` to `Collection`
+
+```java
+public static class Example {
+    public static void main(String[] args) {
+        List<String> l = Arrays.asList("0", "1");
+
+        // Constructor
+        ArrayList<String> al = new ArrayList<>(l);
+        LinkedList<String> ll = new LinkedList<>(l);
+        HashSet<String> hs = new HashSet<>(l);
+        TreeSet<String> tr = new TreeSet<>(l);
+    }
+}
+```
 
 # 排序 Sort
 
