@@ -38,14 +38,19 @@ public static class Example {
 
 # 类型转换 Convert
 
-## `Array` to `List`
+## `Array` to `Collection`
+
+`Array` can only be converted to a `List` directly. We can then convert that `List` to other `Collection`'s.
 
 ```java
 public static class Example {
     public static void main(String[] args) {
         String[] a = new String[]{"0"};
 
+        // Convert to List
         List<String> l = Arrays.asList(a);
+
+        // Convert to List and then to Collection
         ArrayList<String> al = new ArrayList<>(Arrays.asList(a));
     }
 }
