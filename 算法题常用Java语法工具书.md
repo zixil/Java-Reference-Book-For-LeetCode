@@ -18,16 +18,20 @@ public static class Example {
 
 ## `List`
 
-
 ```java
 public static class Example {
     public static void main(String[] args) {
-        List<String> l = Arrays.asList("0", "1");
+
+        // Initialize ["0", "1"]
+        List<String> l1 = Arrays.asList("0", "1");
         ArrayList<String> al1 = new ArrayList<>(Arrays.asList("0", "1"));
         ArrayList<String> al2 = new ArrayList<>(){{
             add("0");
             add("1");
         }};
+        
+        // Initialize ["0"]
+        List<String> l2 = Collections.singletonList("0");
     }
 }
 ```
