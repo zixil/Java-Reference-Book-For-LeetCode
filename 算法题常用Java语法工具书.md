@@ -145,4 +145,39 @@ public static class Example {
 }
 ```
 
+# 反转 Reverse
+
+## `List`
+
+```java
+public static class Example {
+    public static void main(String[] args) {
+        List<Integer> l = Arrays.asList(1, 2);
+
+        Collections.reverse(l);
+    }
+}
+```
+
+## `Array`
+
+**`Array` has to be reversed manually**. Another choice is to convert it to a `List` at first.
+
+```java
+public static class Example {
+    public static void main(String[] args) {
+        String[] a = new String[]{"0", "1"};
+
+        // Convert to List
+        List<String> l = Arrays.asList(a);
+
+        // Reverse the List
+        Collections.reverse(l);
+
+        // Convert back to Array
+        a = l.toArray(new String[0]);
+    }
+}
+```
+
 # 深拷贝 Deep Copy
