@@ -16,22 +16,40 @@ public static class Example {
 }
 ```
 
-## `List`
+## `Collection`
 
 ```java
 public static class Example {
     public static void main(String[] args) {
-
-        // Initialize ["0", "1"]
+        // List
         List<String> l1 = Arrays.asList("0", "1");
         ArrayList<String> al1 = new ArrayList<>(Arrays.asList("0", "1"));
         ArrayList<String> al2 = new ArrayList<>(){{
             add("0");
             add("1");
         }};
-        
-        // Initialize ["0"]
+        // Singleton List
         List<String> l2 = Collections.singletonList("0");
+
+        // Set
+        HashSet<String> hs1 = new HashSet<String>(Arrays.asList("0", "1"));
+        // SingletonSet
+        Set<String> s2 = Collections.singleton("0");
+    }
+}
+```
+
+## `Map`
+
+```java
+public static class Example {
+    public static void main(String[] args) {
+        HashMap<String, String> m1 = new HashMap<>() {{
+            put("0", "0");
+            put("1", "1");
+        }};
+        // SingletonMap
+        Map<String, String> m2 = Collections.singletonMap("0", "0");
     }
 }
 ```
