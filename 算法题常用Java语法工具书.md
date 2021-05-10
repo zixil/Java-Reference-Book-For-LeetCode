@@ -33,7 +33,7 @@ public static class Example {
 
         // Set
         HashSet<String> hs1 = new HashSet<String>(Arrays.asList("0", "1"));
-        // SingletonSet
+        // Singleton Set
         Set<String> s2 = Collections.singleton("0");
     }
 }
@@ -48,7 +48,7 @@ public static class Example {
             put("0", "0");
             put("1", "1");
         }};
-        // SingletonMap
+        // Singleton Map
         Map<String, String> m2 = Collections.singletonMap("0", "0");
     }
 }
@@ -111,9 +111,34 @@ public static class Example {
 public static class Example {
     public static void main(String[] args) {
         int[] a = new int[]{0};
+
         Arrays.sort(a);
         Arrays.sort(a, (o1, o2) -> o1 - o2);
+
+        // reverse
         Arrays.sort(a, Collections.reverseOrder());
+        Arrays.sort(a, (o1, o2) -> o2 - o1);
+    }
+}
+```
+
+## `List`
+
+```java
+public static class Example {
+    public static void main(String[] args) {
+        ArrayList<Integer> al = new ArrayList<>(Arrays.asList(1, 2));
+
+        al.sort(Comparator.naturalOrder());
+        al.sort((o1, o2) -> o1 - o2);
+        Collections.sort(al);
+        Collections.sort(al, (o1, o2) -> o1 - o2);
+
+        // reverse
+        al.sort(Comparator.reverseOrder());
+        al.sort((o1, o2) -> o2 - o1);
+        Collections.sort(al, Collections.reverseOrder());
+        Collections.sort(al, (o1, o2) -> o2 - o1);
     }
 }
 ```
