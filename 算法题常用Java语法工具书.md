@@ -184,6 +184,14 @@ public static class Example {
     public static void main(String[] args) {
         String[] a = new String[]{"0", "1"};
 
+        // Manual reversion
+        int len = a.length;
+        for (int i = 0; i < len / 2; ++i) {
+            String tmp = a[i];
+            a[i] = a[len - i - 1];
+            a[len - i - 1] = tmp;
+        }
+
         // Convert to List
         List<String> l = Arrays.asList(a);
 
