@@ -32,7 +32,7 @@ public static class Example {
 }
 ```
 
-#类型转换 Convert
+# 类型转换 Convert
 
 ## `Array` to `List`
 
@@ -70,7 +70,7 @@ public static class Example {
         int[] a = new int[]{0};
         Arrays.sort(a);
         Arrays.sort(a, (o1, o2) -> o1 - o2);
-        Arrays.sort();
+        Arrays.sort(a, Collections.reverseOrder());
     }
 }
 ```
