@@ -60,6 +60,8 @@ public static class Example {
 
 `Array` can only be converted to a `List` directly. We can then convert that `List` to other `Collection`'s.
 
+Also, `Array`'s like `int[]` cannot be converted to `List<Integer>` directly.
+
 ```java
 public static class Example {
     public static void main(String[] args) {
