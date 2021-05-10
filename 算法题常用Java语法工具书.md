@@ -1,9 +1,3 @@
-# 继承
-
-`Vector` <- `Stack`, `Collection`
-
-`Collection` <- `List`, `Set`
-
 # 初始化 Initialize
 
 ## `Array`
@@ -76,7 +70,7 @@ public static class Example {
 }
 ```
 
-## `Vector` to `Array`
+## `Collection` to `Array`
 
 ```java
 public static class Example {
@@ -101,6 +95,10 @@ public static class Example {
         LinkedList<String> ll = new LinkedList<>(l);
         HashSet<String> hs = new HashSet<>(l);
         TreeSet<String> tr = new TreeSet<>(l);
+
+        // Stack doesn't have non-empty constructor
+        Stack<String> s = new Stack<>();
+        s.addAll(l);
     }
 }
 ```
