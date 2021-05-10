@@ -143,6 +143,24 @@ public static class Example {
 }
 ```
 
+## `Stack`
+
+```java
+public static class Example {
+    public static void main(String[] args) {
+        String<Integer> s = new Stack<>();
+        s.add(Arrays.asList(1, 2));
+
+        s.sort(Comparator.naturalOrder());
+        s.sort((o1, o2) -> o1 - o2);
+
+        // reverse
+        s.sort(Collections.reverseOrder());
+        s.sort((o1, o2) -> o2 - o1);
+    }
+}
+```
+
 # 反转 Reverse
 
 ## `List`
